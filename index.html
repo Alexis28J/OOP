@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+
+<body>
+
+</body>
+
+<!-- Importo gli script in ordine di dipendenza: Human prima di tutti gli altri
+//sarà la superclasse di tutti gli altri  -->
+<script src="./Model/Human.js"></script>  
+<!-- tutti erediteranno da Human.js, per questo lo metto in cima -->
+<script src="./Model/Student.js"></script>
+<!-- Ho messo prima Student perchè Main lo userà e bisogna che Student si carichi per prima -->
+<script src="./Model/Teacher.js"></script>
+<script src="./Model/Principal.js"></script>
+<script src="./Model/Student-tutor.js"></script>
+<script src="./Model/Esercizi-classe.js"></script>
+
+<script src="Main.js"></script>
+<script src="./Esercizi.js"></script>
+
+</html>
