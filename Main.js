@@ -237,10 +237,10 @@ eros.yob = 3000;
 console.log(eros.yob);  //Non cambia niente, ha ignorato la modifica di questa proprietà perché questa è in "modalità lettura" 
                         //a meno che metta il SETTER (in questo caso in Human)
 
-eros.yob = 100;
+eros.yob = 100;         
 console.log(eros.yob);   //Grazie alle condizioni del setter, ora si può escludere dati assurdi
 
 eros.yob = 1993;
-console.log(eros.yob);  
+console.log(eros.yob);   // Per usare il getter, si accede alla proprietà come fosse una normale proprietà
 
 

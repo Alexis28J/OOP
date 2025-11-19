@@ -15,8 +15,6 @@ class Human {   //Human: classe ("padre")
         return this._yob;  //questo per poter "esporre" la proprietà al di fuori di Human
     }
 
-
-
     set yob(newYob) {  //SETTER  
         //In JavaScript, un setter è un metodo speciale che ti consente di definire cosa succede quando si cerca di impostare il valore di una proprietà. 
         // Viene utilizzato per controllare e validare i dati prima che vengano assegnati, offrendo un modo per proteggere le proprietà e aggiungere logica personalizzata, 
@@ -37,10 +35,23 @@ class Human {   //Human: classe ("padre")
         }
     }
 
+    get age (){  //posso sostituire la funzione calculateAge (più sotto) 
+        const actualYear = new Date().getFullYear();  //stesso codice della funzione
+        const age = actualYear - this._yob;   
+        return age;   
+    }
+
+    // calculateAge(){   //Funzione per calcolare l'età
+    //     const actualYear = new Date().getFullYear();    
+    //     const age = actualYear - this._yob;   //anno attuale - anno di nascita
+    //     return age;                           //ritona l'età
+    // }
+
     toString() {
         return "nome: " + this.name + "\n" +
             "cognome: " + this.surname + "\n" +
-            "anno di nascita: " + this._yob;    //finchè c'è dentro Human va bene metterlo così
+          //"anno di nascita: " + this._yob;    //finchè c'è dentro Human va bene metterlo così
+            "età: " + this.age;   //ora posso usarlo come proprietà e non come funzione
     }
 
 }
